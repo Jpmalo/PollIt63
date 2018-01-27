@@ -21,7 +21,7 @@ module.exports = function (app) {
             category: req.body.category,
             UserId: req.body.UserId
         }).then(function (response) {
-            console.log("yo",response)
+            console.log(response)
             answers.forEach(function(answer) {
                 answer.PollId = response.id;
             })

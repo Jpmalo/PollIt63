@@ -172,7 +172,6 @@ $(function () {
                 // { headers: { Authorization: sessionStorage.jwt } }
             )
                 .then(function (response) {
-                    alert("yo")
                     // var pollID = response.data[0].PollId;
                     // console.log("The Poll ID is : " + pollID);
                     console.log(response);
@@ -217,7 +216,6 @@ $(function () {
 
                 })
                 .catch(function (error) {
-                    alert("no yo")
                     console.log(error);
                 });
 
