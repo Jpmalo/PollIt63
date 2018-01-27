@@ -1,0 +1,62 @@
+<!-- particles.js container --> 
+	<div id="particles-js"></div> 
+	<!-- stats - count particles --> 
+	<div class="count-particles"> 
+		<span class="js-count-particles">--</span> particles 
+	</div> 
+	<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<!-- stats.js lib --> 
+	<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+	<div class="header">
+		<div class="block-alpha">
+			<a href="/">
+				<div class="logo">PollIt</div>
+			</a>
+		</div>
+		<div class="block-beta">
+			<a href="create-poll.html">
+				<button type="submit" class="btn">Create Poll</button>
+			</a>
+		</div>
+		<div class="block-omega">
+			<div class="log-form">
+				<form >
+				{{!-- action="/api/auth/login" method="post" --}}
+					<input type="text" id="username" name="userName" title="username" placeholder="username" />
+					<input type="password" id="password" name="password" title="username" placeholder="password" />
+					<button type="button" id="loginBtn" class="btn login">Login</button>
+					<a class="forgot" href="#">Forgot Username?</a>
+				</form>
+				<button id="signup-button" class="signup" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Sign Up</button>
+			</div>
+			<a href="#">
+				<button id="my-polls_top" class="btn my-polls">My Polls</button>
+			</a>
+		</div>
+	</div>
+
+	<div class="container">
+        <h3 class="category-title">Entertainment</h3>
+        <div class="poll">
+			<div class="poll-question">Are you not entertained?</div>
+			<div class="poll-answer">
+				<form>
+					<input type="radio" name="option" value="">
+						<span>Yes I am entertained</span>
+					<input type="radio" name="option" value="">
+						<span>No I am not entertained</span><br>
+					<input type="radio" name="option" value=""> 
+						<span>Yes I am not entertained</span>
+					<input type="radio" name="option" value="">
+						<span>No I am entertained</span>
+				</form> 
+			</div>
+			<button type="submit" class="btn vote-button">Vote</button>
+			<div class="total-votes">
+				<i class="small material-icons">insert_chart</i>
+				<div class="vote-counter"></div>
+			</div>
+		</div>
+    </div>
