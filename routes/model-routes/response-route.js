@@ -27,7 +27,11 @@ module.exports = function (app) {
         }).then(function (dbAnswer) {
             // PRETTIFY THE THE JSON
             res.json(dbAnswer);
-        });
+        })
+        .catch(function(err) {
+            console.log(err);
+            res.status(500).json(err);
+        })
     }); // END POST
 
    /*
